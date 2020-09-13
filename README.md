@@ -1,3 +1,3 @@
 # Specs
 
-Specs are validators for external objects.
+Specs are validators for non-code objects.
