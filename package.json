@@ -1,8 +1,8 @@
 {
-  "name": "specs",
-  "version": "1.0.0",
+  "name": "makesure",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:DenisGorbachev/specs.git",
+  "repository": "https://github.com/DenisGorbachev/makesure.git",
   "author": "Denis Gorbachev <denis.d.gorbachev@gmail.com>",
   "license": "MIT",
   "scripts": {
