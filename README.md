@@ -2,9 +2,9 @@
 
 MakeSure is a collection of pre-release checklists. You can run them before publishing your product — just to make sure that you didn't miss the important details. 
 
-:warning: If you don't use checklists, you may release a bad product without knowing it. :warning:
+**:warning: If you don't use checklists, you may release a bad product without knowing it. :warning:**
 
-Examples:
+## Examples
 
 * Make sure your product is ready for a ProductHunt launch.
 * Make sure your business model contains all relevant details.
@@ -12,21 +12,24 @@ Examples:
 
 ## Usage
 
-`makesure BusinessModel model.txt`
-`makesure ProductHuntLaunch launch.todo.txt`
-`makesure Startup startup.js`
+```
+makesure BusinessModel model.txt
+makesure ProductHuntLaunch launch.todo.txt
+makesure Startup startup.js
+```
 
 Shorthand:
-
-`ms BusinessModel model.txt`
+```
+ms BusinessModel model.txt
+```
 
 ## Writing plugins
 
-`makesure `
-
 ## Managing your startup
 
-You can even manage . It's "Project-Management-As-Code"
+You can even manage your whole startup with `makesure`. Just create your own checklists (or extend existing ones).
+
+Makesure acts as a "Project-Management-As-Code" tool.
 
 ## Manage your life
 
