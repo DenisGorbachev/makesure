@@ -2,7 +2,7 @@
 
 MakeSure is a collection of pre-release checklists. You can run them before publishing your product — just to make sure that you didn't miss the important details. 
 
-**:warning: If you don't use checklists, you may release a bad product without knowing it. :warning:**
+**:warning: If you don't use checklists, you run the risk of releasing a bad product. :warning:**
 
 ## Examples
 
