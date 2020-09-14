@@ -6,6 +6,9 @@
   "author": "Denis Gorbachev <denis.d.gorbachev@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": "^14.10.0"
+  },
   "scripts": {
     "run": "babel-node bin/makesure"
   },
