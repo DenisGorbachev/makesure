@@ -25,9 +25,9 @@ ms BusinessModel model.txt
 
 ## Writing plugins
 
-You can write plugins for `makesure`, defining your own checklist & sharing them with the community.
+You can write plugins for `makesure`, defining your own checklists & sharing them with the community.
 
-Plugins are regular NPM modules, so that they could be installed in team repositories (see below). 
+Plugins are regular NPM modules, so they can be installed in team repositories (see below). 
 
 ## Managing your team
 
