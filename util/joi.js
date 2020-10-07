@@ -1,11 +1,11 @@
 import JoiOriginal from 'joi'
 
 const Joi = JoiOriginal.defaults((schema) => {
-  return schema.options({ presence: 'required' })
+  return schema.options({ presence: 'required', allowUnknown: true })
 }).extend((schema) => {
   return {
     type: 'mongoid',
-    base: schema.string().length(24)
+    base: schema.string().length(24),
   }
 })
 
@@ -14,7 +14,7 @@ Joi.DBObject = function (fields) {
     _id: Joi.string(),
     createdAt: Joi.date(),
     updatedAt: Joi.date(),
-  }, fields))
+  }, fields)).unknown(true)
 }
 
 export default Joi
