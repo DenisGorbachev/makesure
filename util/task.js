@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export class Task {
   constructor(message, properties) {
     this.message = message
@@ -31,4 +33,12 @@ export function recombine(combinations) {
 
 export function pluckProperties(tasks) {
   return tasks.map(task => task.properties)
+}
+
+export function not(value) {
+  return _.isUndefined(value) || _.isNull(value) || _.isNaN(value) || ((_.isObject(value) || _.isArray(value) || _.isString(value)) && _.isEmpty(value))
+}
+
+export function uid(collection, object) {
+  return `${collection}:${object._id}`
 }
