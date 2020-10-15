@@ -1,14 +1,24 @@
 import _ from 'lodash'
 
 export class Task {
-  constructor(message, properties) {
+  constructor(message, properties = {}, renderer = null) {
     this.message = message
     this.properties = properties
+    this.renderer = renderer
   }
+
+  toString(color = false) {
+    return this.renderer(this)
+  }
+
 }
 
-export function task(name, properties = {}) {
-  return new Task(name.trim(), properties)
+export function task(name, properties = {}, renderer = render) {
+  return new Task(name.trim(), properties, renderer)
+}
+
+export function render(task) {
+  return `* ${task.message} ${!_.isEmpty(task.properties) ? JSON.stringify(task.properties, null, 2) : ''}`.trim()
 }
 
 export function go(name, properties = {}) {
@@ -37,6 +47,10 @@ export function pluckProperties(tasks) {
 
 export function not(value) {
   return _.isUndefined(value) || _.isNull(value) || _.isNaN(value) || ((_.isObject(value) || _.isArray(value) || _.isString(value)) && _.isEmpty(value))
+}
+
+export function has(value) {
+  return !not(value)
 }
 
 export function uid(collection, object) {
