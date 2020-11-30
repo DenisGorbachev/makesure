@@ -21,4 +21,10 @@ Joi.DBObject = function (fields) {
   }, fields)).unknown(true)
 }
 
+Joi.attemptChecks = function (params, schema = Joi.object({})) {
+  return this.attempt(params, schema.append({
+    checks: Joi.array().items(Joi.string()),
+  }))
+}
+
 export default Joi
